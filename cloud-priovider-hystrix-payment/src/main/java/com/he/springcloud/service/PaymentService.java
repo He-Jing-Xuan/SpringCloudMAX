@@ -25,9 +25,9 @@ public class PaymentService {
     @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler",//超时后回调方法
             commandProperties = {
                     @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds",//时间单位
-                            value="3000")})//超时时间
+                            value="5000")})//超时时间
     public String paymentinfo_Timeout(Integer id){
-        int interTime = 3;
+        int interTime = 1;
         try{
             TimeUnit.SECONDS.sleep(interTime);//模拟超时
         }catch (Exception e){

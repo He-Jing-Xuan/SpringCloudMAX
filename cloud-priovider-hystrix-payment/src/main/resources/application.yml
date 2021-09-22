@@ -14,4 +14,4 @@ eureka:
     prefer-ip-address: true # 可以显示ip地址
 spring:
   application:
-    name: cloud-priovider-hystrix
+    name: cloud-priovider-hystrix-payment
